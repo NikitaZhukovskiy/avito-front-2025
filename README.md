@@ -10,8 +10,18 @@
 </ul>
 
 ## Проект запускается через dockerfile
-
+Вначале запустим server
 ```
+cd server
+make build
+make run
+```
+
+Потом запустим front
+```
+cd ..
+cd client
+
 docker build -t avito-front-2025 .
 
 docker run --name avito-front-2025 -p 3000:3000 avito-front-2025
@@ -21,4 +31,3 @@ docker run --name avito-front-2025 -p 3000:3000 avito-front-2025
 ```
 http://localhost:3000
 ```
-Сервер должен быть доступен по порту 8080 для корректной работы
