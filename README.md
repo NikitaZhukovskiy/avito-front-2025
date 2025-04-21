@@ -4,6 +4,9 @@
   <li>React v18+</li>
   <li>react-router-dom для роутинга</li>
   <li>TailwindCSS - framework для работы с CSS стилями. Выбрал именно этот фреймворк, поскольку уже был опыт работы с ним.</li>
+  <li>Линтер (ESLint)</li>
+  <li>Система сборки Vite</li>
+  <li>React Query</li>
 </ul>
 
 ## Проект запускается через dockerfile
