@@ -1,4 +1,5 @@
 # Использованные технологии
+
 <ul>
   <li>Node.js v20</li>
   <li>React v18+</li>
@@ -9,30 +10,29 @@
   <li>React Query</li>
 </ul>
 
-## Проект запускается через dockerfile
-Вначале запустим server
-```
-cd server
-make build
-make run
-```
+## Проект запускается через docker-compose
 
-Потом запустим front
-```
-cd ..
-cd client
-
-docker build -t avito-front-2025 .
-
-docker run --name avito-front-2025 -p 3000:3000 avito-front-2025
+Для запуска проекта введите в консоль:
 
 ```
+docker-compose up --build
+
+```
+
 После запуска контейнера клиент будет доступен по адресу:
+
 ```
 http://localhost:3000
 ```
 
+А server по адресу:
+
+```
+http://localhost:8080
+```
+
 # Краткое описание элементов проекта:
+
 <ul>
   <li>\components\Header.tsx - шапка (header) для сайта. Он отображается на каждой странице</li>
   <li>\components\TaskForm.tsx - форма для создания/редактирования задач. Имеет 2 мода ("create" и "edit"), в зависимости от режима, отображает данные о задаче. При режиме "create" после отправки формы создается новая задача. При режиме "edit" отправляется запрос на обновление задачи по taskId</li>
@@ -45,5 +45,4 @@ http://localhost:3000
   <li>\types\board.ts - тип для проекта (доски)</li>
   <li>\types\Task.ts - тип для задачи</li>
   <li>src\App.tsx - роутинг</li>
-</ul> 
-
+</ul>
